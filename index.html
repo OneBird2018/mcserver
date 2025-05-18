@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft 网易&基岩版 - 纳维亚服务器</title>
+    <style>
+        /* 像素字体设置 */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        :root {
+            --mc-green: #3B8526;
+            --mc-brown: #6D4C35;
+            --mc-dark: #1F1F1F;
+            --mc-light: #F8F8F8;
+            --mc-yellow: #FFD700;
+        }
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: var(--mc-dark);
+            color: var(--mc-light);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* 像素风格导航栏 */
+        .nav-container {
+            background-color: var(--mc-green);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            border-bottom: 4px solid var(--mc-brown);
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--mc-light);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-shadow: 2px 2px var(--mc-brown);
+        }
+
+        /* 主内容区 */
+        .hero {
+            margin-top: 100px;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .pixel-title {
+            font-size: 2.5rem;
+            color: var(--mc-green);
+            text-shadow: 4px 4px var(--mc-brown);
+            margin-bottom: 2rem;
+        }
+
+        /* 游戏特色区块 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            background-color: var(--mc-brown);
+        }
+
+        .feature-card {
+            background-color: var(--mc-dark);
+            padding: 1.5rem;
+            border: 4px solid var(--mc-green);
+        }
+
+        /* 服务器信息区块 */
+        .server-info {
+            background-color: var(--mc-dark);
+            padding: 2rem;
+            text-align: center;
+            border: 4px dashed var(--mc-yellow);
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+
+        .server-ip {
+            font-size: 1.5rem;
+            color: var(--mc-yellow);
+            text-shadow: 2px 2px var(--mc-brown);
+            margin: 1rem 0;
+        }
+
+        /* 下载按钮 */
+        .download-btn, .join-btn {
+            display: inline-block;
+            background-color: var(--mc-green);
+            color: var(--mc-light);
+            padding: 1rem 2rem;
+            margin: 1rem;
+            text-decoration: none;
+            border: 4px solid var(--mc-brown);
+            transition: transform 0.1s;
+        }
+
+        .join-btn {
+            background-color: var(--mc-yellow);
+            color: var(--mc-dark);
+        }
+
+        .download-btn:hover, .join-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .pixel-title {
+                font-size: 1.5rem;
+            }
+
+            .server-ip {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-links">
+            <a href="#features" class="nav-link">游戏特色</a>
+            <a href="#server" class="nav-link">加入服务器</a>
+            <a href="#download" class="nav-link">下载游戏&联系我们</a>
+        </div>
+    </nav>
+    </nav>
+
+    <section class="hero">
+        <h1 class="pixel-title">MINECRAFT 服务器</h1>
+        <p>► 服务器特色纯净生存  养老/建筑/社交多向兼容</p>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-card">
+            <h2>跨平台游玩</h2>
+            <p>支持Windows*、Android*、iOS*、Xbox*等多平台联机</p>
+        </div>
+        <div class="feature-card">
+            <h2>建筑达人</h2>
+            <p>服务器内设有建筑达人勋章，快来大展宏图</p>
+        </div>
+        <div class="feature-card">
+            <h2>活动众多</h2>
+            <p>服务器内设有一周一次的活动！</p>
+        </div>
+    </section>
+
+    <section id="server" class="server-info">
+        <h2>加入我们的国际版服务器！</h2>
+        <p>与全球玩家一起探索、建造、生存！</p>
+        <div class="server-ip">
+            IP: <strong>paly.edgerunners.cn</strong><br>
+            端口: <strong>30874</strong>
+        </div>
+        <a href="#" class="join-btn">点击复制IP</a>
+    </section>
+    <section id="server" class="server-info">
+        <h2>加入我们中国版服务器！</h2>
+        <p>与中国玩家一起探索、建造、生存！</p>
+        <div class="server-ip">
+            服务器号: <strong>60703815</strong><br>
+        </div>
+        <a href="https://qm.qq.com/q/UZVjYaCeEG" class="join-btn">点击获取密码</a>
+    </section>
+    <section id="download" style="text-align:center; padding:4rem;">
+        <a href="https://www.minecraft.net/zh-hans/download" class="download-btn">下载基岩版</a>
+        <a href="https://www.mc.163.com/download" class="download-btn">下载中国版</a>
+        <a href="https://qm.qq.com/q/UZVjYaCeEG" class="download-btn">联系我们</a>
+    </section>
+
+    <footer style="background-color: var(--mc-green); padding:2rem; text-align:center;">
+        <p>© 2024 纳维亚 . Minecraft 网易版&基岩版 | 云烨制作 </p>
+        <p>*：网易版只支持IOS与Android，基岩版全端支持</p>
+    </footer>
+
+    <script>
+        // 点击复制IP功能
+        document.querySelector('.join-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const ip = 'yunye.com:114514';
+            navigator.clipboard.writeText(ip).then(() => {
+                alert('已复制服务器IP: ' + ip);
+            }).catch(err => {
+                console.error('复制失败:', err);
+            });
+        });
+    </script>
+</body>
+</html>
